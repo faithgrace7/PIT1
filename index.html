@@ -46,16 +46,13 @@
                 <p><strong>Frameworks:</strong> React, Node.js</p>
                 <p><strong>Databases:</strong> MySQL, Postgres, XAMPP</p>
             </div>
-        </div>
 
-    </div>
-
-    <!-- My Finished Courses Section -->
-        <h2>My Finished Courses</h2>
-    
-        <input type="text" id="search-bar" placeholder="Search for a course..." />
-    
-        <div class="course-container" id="course-list">
+            <!-- My Finished Courses Section -->
+            <section id="courses" class="activities-box">
+                <h2 class="activities-title">My Finished Courses</h2>
+                
+                <!-- Search Bar for Filtering Courses -->
+                <input type="text" id="searchCourse" placeholder="Search courses..." onkeyup="searchCourses()">
         </div>
     </div>
 
@@ -64,17 +61,7 @@
         <p>&copy; All rights reserved.</p>
     </footer>
 
-    <script>
-        function searchCourses() {
-            let input = document.getElementById("searchCourse").value.toLowerCase();
-            let courses = document.querySelectorAll(".activity-card");
-
-            courses.forEach(course => {
-                let text = course.innerText.toLowerCase();
-                course.style.display = text.includes(input) ? "block" : "none";
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
