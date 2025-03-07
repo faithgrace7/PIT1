@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <h2 class="logo">My Online Portfolio</h2>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Left Sidebar -->
+        <div class="left">
+            <img id="profile-pic" src="faith.jpg" alt="Profile Image">
+            <h3>Faith Grace Gutierrez</h3>
+            <p>Student | IT | Trailblazer</p>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right">
+            <h1>Faith's Portfolio</h1>
+
+            <div id="about" class="section">
+                <h2>About Me</h2>
+                <p>I'm a passionate web developer who loves designing and coding creative projects. When I'm not coding, I'm either gaming, watching sci-fi movies, or exploring new tech trends.</p>
+            </div>
+
+            <div id="education" class="section">
+                <h2>Education</h2>
+                <p>Currently a student at the University of Science and Technology of Southern Philippines, where I specialize in IoT devices and programming.</p>
+            </div>
+
+            <div id="skills" class="section">
+                <h2>Skills</h2>
+                <p>Expert in front-end and back-end development, including:</p>
+                <p><strong>Languages:</strong> HTML, CSS, JavaScript, C++, Python</p>
+                <p><strong>Frameworks:</strong> React, Node.js</p>
+                <p><strong>Databases:</strong> MySQL, Postgres, XAMPP</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- My Finished Courses Section -->
+        <h2>My Finished Courses</h2>
+    
+        <input type="text" id="search-bar" placeholder="Search for a course..." />
+    
+        <div class="course-container" id="course-list">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; All rights reserved.</p>
+    </footer>
+
+    <script>
+        function searchCourses() {
+            let input = document.getElementById("searchCourse").value.toLowerCase();
+            let courses = document.querySelectorAll(".activity-card");
+
+            courses.forEach(course => {
+                let text = course.innerText.toLowerCase();
+                course.style.display = text.includes(input) ? "block" : "none";
+            });
+        }
+    </script>
+
+</body>
+</html>

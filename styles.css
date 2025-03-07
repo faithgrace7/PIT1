@@ -1,0 +1,265 @@
+/* Reset Defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body - Soft Pastel Gradient */
+body {
+    background: linear-gradient(to right, #fce4ec, #f3e5f5); /* Light pink & lavender */
+    color: #4a4a4a; /* Soft dark grey for better contrast */
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background: rgba(255, 192, 203, 0.9); /* Soft pastel pink */
+    color: white;
+    padding: 20px;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 5px rgba(255, 182, 193, 0.6);
+}
+
+/* Navigation Bar */
+header ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    color: #4a4a4a;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+header ul li a:hover {
+    background: rgba(255, 182, 193, 0.5);
+    border-radius: 5px;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 30px;
+}
+
+/* Left Section */
+.left {
+    text-align: center;
+    background: rgba(250, 200, 210, 0.3); /* Soft pastel pink */
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    transition: 0.3s ease-in-out;
+}
+
+.left img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #ffb6c1; /* Soft pink */
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.left img:hover {
+    transform: scale(1.05);
+}
+
+/* Right Section */
+.right {
+    max-width: 600px;
+    padding: 30px;
+    text-align: left;
+}
+
+/* Section Styles */
+.section {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.section:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.02);
+}
+
+/* Hover Image Changes */
+#about:hover ~ .left img {
+    content: url('images/pfp.png');
+}
+
+#education:hover ~ .left img {
+    content: url('images/pfp2.png');
+}
+
+#skills:hover ~ .left img {
+    content: url('images/pfp3.png');
+}
+
+.section h2 {
+    color: #ff99ac; /* Soft pastel pink */
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 12px 20px;
+    background: rgba(255, 182, 193, 0.5);
+    border: 1px solid rgba(255, 182, 193, 0.8);
+    border-radius: 8px;
+    color: #4a4a4a;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.buttons button:hover {
+    background: rgba(255, 182, 193, 0.9);
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.6);
+    transform: scale(1.05);
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.sidebar button {
+    padding: 12px 20px;
+    background: rgba(255, 218, 185, 0.5); /* Pastel peach */
+    border: 1px solid rgba(255, 182, 193, 0.8);
+    border-radius: 8px;
+    color: #4a4a4a;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.sidebar button:hover {
+    background: rgba(255, 218, 185, 0.9);
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.8);
+    transform: scale(1.05);
+}
+
+/* Courses Section */
+#courses {
+    text-align: justify;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    background: rgba(255, 245, 238, 0.6); /* Soft pastel peach */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 182, 193, 0.4);
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+}
+
+/* Course List */
+#course-list {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 245, 238, 0.3);
+}
+
+/* Scrollbar Styling */
+#course-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#course-list::-webkit-scrollbar-track {
+    background: rgba(255, 218, 185, 0.2);
+}
+
+#course-list::-webkit-scrollbar-thumb {
+    background: #ffb6c1;
+}
+
+/* Individual Course Card */
+.course {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 182, 193, 0.4);
+    box-shadow: 0 4px 6px rgba(255, 182, 193, 0.3);
+    text-align: center;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.course:hover {
+    background: rgba(255, 182, 193, 0.3);
+    transform: scale(1.02);
+}
+
+/* Course Titles */
+.course h3 {
+    font-size: 1.3rem;
+    color: #ff99ac;
+}
+
+.course h4 {
+    font-size: 1.1rem;
+    color: #ffcccb;
+}
+
+.course ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.course ul li {
+    font-size: 0.9rem;
+    color: #4a4a4a;
+    padding: 4px 0;
+    transition: 0.3s;
+}
+
+.course ul li:hover {
+    color: #ff99ac;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #ffe4e1;
+    color: #4a4a4a;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+#searchCourse {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
